@@ -1,0 +1,54 @@
+// Import Fonts
+@import 'clash-display.css';
+// Global Reset
+*,
+::after,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+}
+
+html {
+  //   overflow-x: hidden;
+}
+
+img {
+  user-select: none;
+}
+
+body {
+  background-color: $navyColor;
+  background-image: url('./images/header/header-background.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 20px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #15265d;
+    border-radius: 20px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $blueColor;
+  }
+}

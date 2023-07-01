@@ -1,0 +1,185 @@
+@import url(clash-display.css);
+*,
+::after,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+img {
+  user-select: none; }
+
+body {
+  background-color: #0b1228;
+  background-image: url("./images/header/header-background.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: #fff;
+  overflow-x: hidden; }
+
+@media (min-width: 768px) {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px; }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 20px; }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #15265d;
+    border-radius: 20px; }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2e76dc; } }
+.nav {
+  transition: all 0.3s ease-in-out;
+  z-index: 99;
+  color: #000; }
+  .nav img {
+    user-select: none; }
+  .nav.scrolled {
+    position: fixed;
+    top: 15px;
+    left: 0;
+    right: 0;
+    background-color: rgba(37, 59, 133, 0.9);
+    border-radius: 40px; }
+  .nav .links a {
+    user-select: none;
+    transition: all 0.3s ease-in-out; }
+    .nav .links a::after {
+      content: '';
+      display: flex;
+      margin: auto;
+      width: 0%;
+      height: 2px;
+      background-color: #fff;
+      transition: all 0.3s ease-in-out; }
+    .nav .links a:hover, .nav .links a:focus {
+      color: #45cfdd; }
+      .nav .links a:hover::after, .nav .links a:focus::after {
+        content: '';
+        width: 100%;
+        background-color: #45cfdd; }
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative; }
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 2px;
+  background: #fff;
+  transform: rotate(0);
+  transition: all 0.5s; }
+
+.hamburger-middle {
+  transform: translateY(7px); }
+
+.hamburger-bottom {
+  transform: translateY(14px); }
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px); }
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px); }
+
+.open .hamburger-middle {
+  display: none; }
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px); }
+
+.menu {
+  transition: all 0.3s ease;
+  transform: translateY(-20em); }
+  .menu.opened {
+    transform: translateY(0); }
+
+.header {
+  position: relative; }
+  .header h1 {
+    color: #fff;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.1475rem;
+    text-transform: capitalize;
+    line-height: 3rem; }
+    @media (min-width: 576px) {
+      .header h1 {
+        line-height: 4rem; } }
+    @media (min-width: 768px) {
+      .header h1 {
+        line-height: 6rem; } }
+    @media (min-width: 1024px) {
+      .header h1 {
+        line-height: 8.25rem; } }
+  .header::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 46.375rem;
+    height: 46.375rem;
+    border-radius: 46.375rem;
+    opacity: 0.5;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(46, 118, 219, 0.5) 0%, rgba(30, 50, 78, 0) 100%); }
+  .header::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 19.5625rem;
+    background: linear-gradient(180deg, rgba(11, 18, 40, 0) 0%, rgba(11, 18, 40, 0.47) 30.69%, rgba(11, 18, 40, 0.75) 59.55%, rgba(11, 18, 40, 0.9) 81.03%, #0b1228 99.84%); }
+  @media (max-width: 1024px) {
+    .header::after {
+      height: 15.5625rem; } }
+  @media (max-width: 768px) {
+    .header::after {
+      height: 12.5625rem; } }
+  @media (max-width: 576px) {
+    .header::after {
+      height: 10.5625rem; } }
+
+#footer {
+  background: radial-gradient(984.68% 984.68% at 50% 50%, #0b1229 0%, #2e76db 100%); }
+  #footer .links {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+    #footer .links a {
+      transition: all 0.3s ease-in; }
+      #footer .links a:hover, #footer .links a:focus {
+        color: #45cfdd; }
+  #footer ul li a {
+    border-radius: 50%;
+    background-color: #2e76db;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in; }
+    #footer ul li a:hover, #footer ul li a:focus {
+      background-color: #45cfdd; }
+
+/*# sourceMappingURL=main.css.map */

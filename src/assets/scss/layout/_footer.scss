@@ -1,0 +1,37 @@
+#footer {
+  background: radial-gradient(984.68% 984.68% at 50% 50%, #0b1229 0%, #2e76db 100%);
+
+  .links {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      transition: all 0.3s ease-in;
+      &:hover,
+      &:focus {
+        color: #45cfdd;
+      }
+    }
+  }
+
+  ul {
+    li {
+      a {
+        border-radius: 50%;
+        background-color: #2e76db;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease-in;
+        &:hover,
+        &:focus {
+          background-color: #45cfdd;
+        }
+      }
+    }
+  }
+}

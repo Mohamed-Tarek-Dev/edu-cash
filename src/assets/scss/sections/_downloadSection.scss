@@ -1,0 +1,8 @@
+#download {
+  background: url('../../../assets/images/download/background.svg');
+  background-size: 100%;
+  @media (min-width: 1024px) {
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+}

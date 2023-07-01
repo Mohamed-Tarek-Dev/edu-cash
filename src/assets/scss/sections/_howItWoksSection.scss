@@ -1,0 +1,35 @@
+#how {
+  .bg {
+    background-color: #162451;
+    border-radius: 2.5rem;
+  }
+
+  .para {
+    align-items: center;
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 3.5rem;
+      background: radial-gradient(
+        249.22% 249.22% at 50% 253.13%,
+        rgba(46, 118, 219, 0.4) 31.47%,
+        rgba(11, 18, 41, 0.4) 100%
+      );
+    }
+    p {
+      width: 90%;
+    }
+  }
+
+  .phone {
+    @media (min-width: 1024px) {
+      bottom: -90px;
+    }
+    @media (min-width: 1440px) {
+      bottom: -48px;
+    }
+  }
+}
