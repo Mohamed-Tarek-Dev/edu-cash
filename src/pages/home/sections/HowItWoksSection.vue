@@ -17,15 +17,15 @@
             <div class="para flex gap-5">
               <span>2</span>
               <p class="text-paraColor">
-                Tap on the icon to open the application. Once you have located the icon, tap on it
-                to launch the application
+                Log in or create an account. This could involve providing your name, email, and
+                phone number, among other details.
               </p>
             </div>
             <div class="para flex gap-5">
               <span>3</span>
               <p class="text-paraColor">
-                Tap on the icon to open the application. Once you have located the icon, tap on it
-                to launch the application
+                Select the function you want to use. Depending on what you want to do, select the
+                appropriate option from the available menu.
               </p>
             </div>
           </div>
