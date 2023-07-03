@@ -32,7 +32,7 @@
 
       <Teleport to="body">
         <div class="lg:hidden relative z-20">
-          <div class="back" ref="backdrop"></div>
+          <div @click="toggleMenu" class="back" ref="backdrop"></div>
           <div
             class="menu fixed top-12 left-6 right-6 flex flex-col items-center lg:hidden opacity-0 self-end py-8 mt-12 space-y-6 font-bold bg-white sm:w-auto sm:self-center drop-shadow-md"
             ref="menu"
@@ -43,10 +43,16 @@
             <a @click="navigateToSection('#about')" class="text-white font-clashSemiBold text-xl"
               >About</a
             >
-            <RouterLink to="/terms" class="text-white font-clashSemiBold text-xl"
+            <RouterLink
+              @click="toggleMenu()"
+              to="/terms"
+              class="text-white font-clashSemiBold text-xl"
               >Terms & Conditions</RouterLink
             >
-            <RouterLink to="/privacy" class="text-white font-clashSemiBold text-xl"
+            <RouterLink
+              @click="toggleMenu()"
+              to="/privacy"
+              class="text-white font-clashSemiBold text-xl"
               >Privacy Center</RouterLink
             >
           </div>
@@ -108,9 +114,11 @@ export default {
       if (route.path !== '/') {
         router.push('/').then(() => {
           scrollToSection(sectionId)
+          toggleMenu()
         })
       } else {
         scrollToSection(sectionId)
+        toggleMenu()
       }
     }
 

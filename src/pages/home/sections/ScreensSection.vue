@@ -1,78 +1,68 @@
 <template>
   <section id="screens">
-    <div class="container">
-      <h2 class="text-center text-4xl sm:text-7xl font-clashSemiBold">App Screens</h2>
-      <swiper
-        :slidesPerView="1"
-        :centeredSlidesBounds="true"
-        :spaceBetween="30"
-        :initialSlide="0"
-        :breakpoints="{
-          '300': {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            slidesOffsetAfter: -500
-          },
-          '640': {
-            slidesPerView: 2,
-            spaceBetween: 20,
-            slidesOffsetAfter: 50
-          },
-          '768': {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            slidesOffsetAfter: 400
-          },
-          '1024': {
-            slidesPerView: 4,
-            spaceBetween: 30,
-            initialSlide: 1,
-            slidesOffsetAfter: 350
-          },
-          '1440': {
-            slidesPerView: 5,
-            spaceBetween: 30,
-            initialSlide: 1,
-            slidesOffsetAfter: 170
-          }
-        }"
-        :modules="modules"
-        class="mySwiper"
-      >
-        <swiper-slide><img src="../../../assets/images/slider/1.svg" alt="Slider" /></swiper-slide>
-        <swiper-slide><img src="../../../assets/images/slider/2.svg" alt="Slider" /></swiper-slide>
-        <swiper-slide><img src="../../../assets/images/slider/3.svg" alt="Slider" /></swiper-slide>
-        <swiper-slide><img src="../../../assets/images/slider/4.svg" alt="Slider" /></swiper-slide>
-        <swiper-slide><img src="../../../assets/images/slider/5.svg" alt="Slider" /></swiper-slide>
-        <swiper-slide><img src="../../../assets/images/slider/6.svg" alt="Slider" /></swiper-slide>
-        <swiper-slide><img src="../../../assets/images/slider/7.svg" alt="Slider" /></swiper-slide>
-      </swiper>
-    </div>
+    <h2 class="text-center text-4xl sm:text-7xl font-clashSemiBold">App Screens</h2>
+    <Carousel v-bind="settings" :breakpoints="breakpoints" class="mt-10 lg:mt-32">
+      <Slide v-for="image in images" :key="image.alt" class="slide">
+        <div class="carousel__item"><img :src="image.img" :alt="image.alt" /></div>
+      </Slide>
+    </Carousel>
   </section>
 </template>
 <script>
-// Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from 'swiper/vue'
+import { defineComponent } from 'vue'
+import { Carousel, Slide } from 'vue3-carousel'
+import { ref, onMounted } from 'vue'
 
-// Import Swiper styles
-import 'swiper/css'
+import 'vue3-carousel/dist/carousel.css'
 
-import 'swiper/css/pagination'
-
-// import required modules
-import { Pagination } from 'swiper'
-
-export default {
+export default defineComponent({
+  name: 'WrapAround',
   components: {
-    Swiper,
-    SwiperSlide
+    Carousel,
+    Slide
   },
   setup() {
-    return {
-      modules: [Pagination]
-    }
+    const settings = ref({
+      itemsToShow: 1,
+      snapAlign: 'center',
+      wrapAround: true
+    })
+    const breakpoints = ref({
+      576: {
+        itemsToShow: 2.1,
+        snapAlign: 'center'
+      },
+      768: {
+        itemsToShow: 2.5,
+        snapAlign: 'center'
+      },
+      1024: {
+        itemsToShow: 5,
+        snapAlign: 'center'
+      },
+      1440: {
+        itemsToShow: 6,
+        snapAlign: 'start'
+      }
+    })
+    const images = ref([
+      { img: './src/assets/images/slider/1.svg', alt: 'Slide' },
+      { img: './src/assets/images/slider/2.svg', alt: 'Slide' },
+      { img: './src/assets/images/slider/3.svg', alt: 'Slide' },
+      { img: './src/assets/images/slider/4.svg', alt: 'Slide' },
+      { img: './src/assets/images/slider/5.svg', alt: 'Slide' },
+      { img: './src/assets/images/slider/6.svg', alt: 'Slide' },
+      { img: './src/assets/images/slider/7.svg', alt: 'Slide' }
+    ])
+
+    onMounted(() => {
+      const carouselViewport = document.querySelector('.carousel__viewport')
+      carouselViewport.style.overflow = 'unset'
+    })
+
+    return { images, settings, breakpoints }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
