@@ -4,7 +4,7 @@
     <Carousel v-bind="settings" :breakpoints="breakpoints" class="mt-10 lg:mt-32">
       <Slide v-for="image in images" :key="image.alt" class="slide">
         <div class="carousel__item">
-          <img :src="image.img" :alt="image.alt" />
+          <img :src="getImageUrl(image.img)" :alt="image.alt" />
         </div>
       </Slide>
     </Carousel>
@@ -47,33 +47,27 @@ export default defineComponent({
         snapAlign: 'start'
       }
     })
-    const images = [
-      { img: () => import('../../../assets/images/slider/1.svg'), alt: 'Slide' },
-      { img: () => import('../../../assets/images/slider/2.svg'), alt: 'Slide' },
-      { img: () => import('../../../assets/images/slider/3.svg'), alt: 'Slide' },
-      { img: () => import('../../../assets/images/slider/4.svg'), alt: 'Slide' },
-      { img: () => import('../../../assets/images/slider/5.svg'), alt: 'Slide' },
-      { img: () => import('../../../assets/images/slider/6.svg'), alt: 'Slide' },
-      { img: () => import('../../../assets/images/slider/7.svg'), alt: 'Slide' }
-    ]
 
-    // For netlify
-    // const images = [
-    //   { img: '/assets/1.svg', alt: 'Slide' },
-    //   { img: '/assets/2.svg', alt: 'Slide' },
-    //   { img: '/assets/3.svg', alt: 'Slide' },
-    //   { img: '/assets/4.svg', alt: 'Slide' },
-    //   { img: '/assets/5.svg', alt: 'Slide' },
-    //   { img: '/assets/6.svg', alt: 'Slide' },
-    //   { img: '/assets/7.svg', alt: 'Slide' }
-    // ]
+    const images = ref([
+      { img: '1', alt: 'Slide' },
+      { img: '2', alt: 'Slide' },
+      { img: '3', alt: 'Slide' },
+      { img: '4', alt: 'Slide' },
+      { img: '5', alt: 'Slide' },
+      { img: '6', alt: 'Slide' },
+      { img: '7', alt: 'Slide' }
+    ])
 
     onMounted(() => {
       const carouselViewport = document.querySelector('.carousel__viewport')
       carouselViewport.style.overflow = 'unset'
     })
 
-    return { images, settings, breakpoints }
+    function getImageUrl(name) {
+      return new URL(`../../../assets/images/slider/${name}.svg`, import.meta.url).href
+    }
+
+    return { images, settings, breakpoints, getImageUrl }
   }
 })
 </script>
