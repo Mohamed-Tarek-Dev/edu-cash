@@ -58,13 +58,13 @@ export default defineComponent({
     // ])
 
     const images = ref([
-      { img: '../../../assets/images/slider/1.svg', alt: 'Slide' },
-      { img: '../../../assets/images/slider/2.svg', alt: 'Slide' },
-      { img: '../../../assets/images/slider/3.svg', alt: 'Slide' },
-      { img: '../../../assets/images/slider/4.svg', alt: 'Slide' },
-      { img: '../../../assets/images/slider/5.svg', alt: 'Slide' },
-      { img: '../../../assets/images/slider/6.svg', alt: 'Slide' },
-      { img: '../../../assets/images/slider/7.svg', alt: 'Slide' }
+      { img: '/assets/images/slider/1.svg', alt: 'Slide' },
+      { img: '/assets/images/slider/2.svg', alt: 'Slide' },
+      { img: '/assets/images/slider/3.svg', alt: 'Slide' },
+      { img: '/assets/images/slider/4.svg', alt: 'Slide' },
+      { img: '/assets/images/slider/5.svg', alt: 'Slide' },
+      { img: '/assets/images/slider/6.svg', alt: 'Slide' },
+      { img: '/assets/images/slider/7.svg', alt: 'Slide' }
     ])
 
     onMounted(() => {
