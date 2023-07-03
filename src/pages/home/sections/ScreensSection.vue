@@ -3,7 +3,9 @@
     <h2 class="text-center text-4xl sm:text-7xl font-clashSemiBold">App Screens</h2>
     <Carousel v-bind="settings" :breakpoints="breakpoints" class="mt-10 lg:mt-32">
       <Slide v-for="image in images" :key="image.alt" class="slide">
-        <div class="carousel__item"><img :src="image.img" :alt="image.alt" /></div>
+        <div class="carousel__item">
+          <img src="../../../assets/images/slider/1.svg" :alt="image.alt" />
+        </div>
       </Slide>
     </Carousel>
   </section>
@@ -46,13 +48,13 @@ export default defineComponent({
       }
     })
     const images = ref([
-      { img: './src/assets/images/slider/1.svg', alt: 'Slide' },
-      { img: './src/assets/images/slider/2.svg', alt: 'Slide' },
-      { img: './src/assets/images/slider/3.svg', alt: 'Slide' },
-      { img: './src/assets/images/slider/4.svg', alt: 'Slide' },
-      { img: './src/assets/images/slider/5.svg', alt: 'Slide' },
-      { img: './src/assets/images/slider/6.svg', alt: 'Slide' },
-      { img: './src/assets/images/slider/7.svg', alt: 'Slide' }
+      { img: './assets/images/slider/1.svg', alt: 'Slide' },
+      { img: './assets/images/slider/2.svg', alt: 'Slide' },
+      { img: './assets/images/slider/3.svg', alt: 'Slide' },
+      { img: './assets/images/slider/4.svg', alt: 'Slide' },
+      { img: './assets/images/slider/5.svg', alt: 'Slide' },
+      { img: './assets/images/slider/6.svg', alt: 'Slide' },
+      { img: './assets/images/slider/7.svg', alt: 'Slide' }
     ])
 
     onMounted(() => {
