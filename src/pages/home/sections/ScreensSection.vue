@@ -4,7 +4,7 @@
     <Carousel v-bind="settings" :breakpoints="breakpoints" class="mt-10 lg:mt-32">
       <Slide v-for="image in images" :key="image.alt" class="slide">
         <div class="carousel__item">
-          <img src="../../../assets/images/slider/1.svg" :alt="image.alt" />
+          <img :src="image.img" :alt="image.alt" />
         </div>
       </Slide>
     </Carousel>
@@ -47,14 +47,24 @@ export default defineComponent({
         snapAlign: 'start'
       }
     })
+    // const images = ref([
+    //   { img: './assets/images/slider/1.svg', alt: 'Slide' },
+    //   { img: './assets/images/slider/2.svg', alt: 'Slide' },
+    //   { img: './assets/images/slider/3.svg', alt: 'Slide' },
+    //   { img: './assets/images/slider/4.svg', alt: 'Slide' },
+    //   { img: './assets/images/slider/5.svg', alt: 'Slide' },
+    //   { img: './assets/images/slider/6.svg', alt: 'Slide' },
+    //   { img: './assets/images/slider/7.svg', alt: 'Slide' }
+    // ])
+
     const images = ref([
-      { img: './assets/images/slider/1.svg', alt: 'Slide' },
-      { img: './assets/images/slider/2.svg', alt: 'Slide' },
-      { img: './assets/images/slider/3.svg', alt: 'Slide' },
-      { img: './assets/images/slider/4.svg', alt: 'Slide' },
-      { img: './assets/images/slider/5.svg', alt: 'Slide' },
-      { img: './assets/images/slider/6.svg', alt: 'Slide' },
-      { img: './assets/images/slider/7.svg', alt: 'Slide' }
+      { img: '../../../assets/images/slider/1.svg', alt: 'Slide' },
+      { img: '../../../assets/images/slider/2.svg', alt: 'Slide' },
+      { img: '../../../assets/images/slider/3.svg', alt: 'Slide' },
+      { img: '../../../assets/images/slider/4.svg', alt: 'Slide' },
+      { img: '../../../assets/images/slider/5.svg', alt: 'Slide' },
+      { img: '../../../assets/images/slider/6.svg', alt: 'Slide' },
+      { img: '../../../assets/images/slider/7.svg', alt: 'Slide' }
     ])
 
     onMounted(() => {
