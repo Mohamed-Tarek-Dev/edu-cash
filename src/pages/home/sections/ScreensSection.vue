@@ -47,26 +47,26 @@ export default defineComponent({
         snapAlign: 'start'
       }
     })
-    // const images = ref([
-    //   { img: './src/assets/images/slider/1.svg', alt: 'Slide' },
-    //   { img: './src/assets/images/slider/2.svg', alt: 'Slide' },
-    //   { img: './src/assets/images/slider/3.svg', alt: 'Slide' },
-    //   { img: './src/assets/images/slider/4.svg', alt: 'Slide' },
-    //   { img: './src/assets/images/slider/5.svg', alt: 'Slide' },
-    //   { img: './src/assets/images/slider/6.svg', alt: 'Slide' },
-    //   { img: './src/assets/images/slider/7.svg', alt: 'Slide' }
-    // ])
+    const images = [
+      { img: () => import('../../../assets/images/slider/1.svg'), alt: 'Slide' },
+      { img: () => import('../../../assets/images/slider/2.svg'), alt: 'Slide' },
+      { img: () => import('../../../assets/images/slider/3.svg'), alt: 'Slide' },
+      { img: () => import('../../../assets/images/slider/4.svg'), alt: 'Slide' },
+      { img: () => import('../../../assets/images/slider/5.svg'), alt: 'Slide' },
+      { img: () => import('../../../assets/images/slider/6.svg'), alt: 'Slide' },
+      { img: () => import('../../../assets/images/slider/7.svg'), alt: 'Slide' }
+    ]
 
     // For netlify
-    const images = ref([
-      { img: '/assets/1.svg', alt: 'Slide' },
-      { img: '/assets/2.svg', alt: 'Slide' },
-      { img: '/assets/3.svg', alt: 'Slide' },
-      { img: '/assets/4.svg', alt: 'Slide' },
-      { img: '/assets/5.svg', alt: 'Slide' },
-      { img: '/assets/6.svg', alt: 'Slide' },
-      { img: '/assets/7.svg', alt: 'Slide' }
-    ])
+    // const images = [
+    //   { img: '/assets/1.svg', alt: 'Slide' },
+    //   { img: '/assets/2.svg', alt: 'Slide' },
+    //   { img: '/assets/3.svg', alt: 'Slide' },
+    //   { img: '/assets/4.svg', alt: 'Slide' },
+    //   { img: '/assets/5.svg', alt: 'Slide' },
+    //   { img: '/assets/6.svg', alt: 'Slide' },
+    //   { img: '/assets/7.svg', alt: 'Slide' }
+    // ]
 
     onMounted(() => {
       const carouselViewport = document.querySelector('.carousel__viewport')
