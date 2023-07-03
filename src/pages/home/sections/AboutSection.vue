@@ -26,7 +26,7 @@
                 especially true for installment payments. When a payment is late,
               </p>
               <p class="text-base font-clashExtraLight text-paraColor mt-6 lg:text-xl">
-                it can mean significant additional costs that make the overall expense much more
+                It can mean significant additional costs that make the overall expense much more
                 than it was originally intended to be.
               </p>
             </div>

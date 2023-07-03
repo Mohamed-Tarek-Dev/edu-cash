@@ -12,7 +12,7 @@
           <p
             class="text-base text-paraColor font-clashExtraLight my-5 px-3 lg:text-left lg:my-0 lg:px-0 lg:text-xl"
           >
-            simply click the download button and wait for the application to download and install on
+            Simply click the download button and wait for the application to download and install on
             your device. Before downloading the application, take a few moments to read the app
             description, reviews, and ratings. This can give you an idea of what to expect from the
             application.

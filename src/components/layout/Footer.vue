@@ -5,8 +5,8 @@
         <div class="copyright">&copy; 2023 All Rights Reserved</div>
         <div class="links flex gap-7">
           <a href="#download">Download</a>
-          <a href="#screens">Screens</a>
-          <a href="#about">About</a>
+          <a @click="navigateToSection('#screens')">Screens</a>
+          <a @click="navigateToSection('#screens')">About</a>
           <router-link to="/terms">Terms & Conditions</router-link>
           <router-link to="/privacy">Privacy Policy</router-link>
         </div>
@@ -28,6 +28,34 @@
     </div>
   </footer>
 </template>
+
+<script>
+import { useSmoothScroll } from '../plugins/useSmoothScroll'
+import { useRoute, useRouter } from 'vue-router'
+
+export default {
+  setup() {
+    const route = useRoute()
+    const router = useRouter()
+    const { scrollToSection } = useSmoothScroll()
+
+    const navigateToSection = (sectionId) => {
+      if (route.path !== '/') {
+        router.push('/').then(() => {
+          scrollToSection(sectionId)
+          router.afterEach(() => {
+            scrollToSection(sectionId)
+          })
+        })
+      } else {
+        scrollToSection(sectionId)
+      }
+    }
+
+    return { navigateToSection }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 @import '../../assets/scss/layout/_footer.scss';

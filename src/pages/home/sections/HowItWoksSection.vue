@@ -11,7 +11,7 @@
               <span>1</span>
               <p class="text-paraColor">
                 Tap on the icon to open the application. Once you have located the icon, tap on it
-                to launch the application
+                to launch the application.
               </p>
             </div>
             <div class="para flex gap-5">
