@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomePage from '../pages/home/HomePage.vue'
+import HomePage from '../views/home/HomePage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,12 +12,12 @@ const router = createRouter({
     {
       path: '/terms',
       name: 'termsAndConditions',
-      component: () => import('../pages/terms/TermsAndConditions.vue')
+      component: () => import('../views/terms/TermsAndConditions.vue')
     },
     {
       path: '/privacy',
       name: 'privacyCenter',
-      component: () => import('../pages/privacy/PrivacyCenter.vue')
+      component: () => import('../views/privacy/PrivacyCenter.vue')
     }
   ]
 })

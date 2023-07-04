@@ -7,6 +7,10 @@
           <img :src="getImageUrl(image.img)" :alt="image.alt" />
         </div>
       </Slide>
+
+      <template #addons>
+        <img src="../../../assets/images/slider/frame.png" alt="Frame" class="frame" />
+      </template>
     </Carousel>
   </section>
 </template>
@@ -28,14 +32,15 @@ export default defineComponent({
       itemsToShow: 1,
       snapAlign: 'center',
       wrapAround: true
+      // autoplay: 5000
     })
     const breakpoints = ref({
       576: {
-        itemsToShow: 2.1,
+        itemsToShow: 1,
         snapAlign: 'center'
       },
       768: {
-        itemsToShow: 2.5,
+        itemsToShow: 3.5,
         snapAlign: 'center'
       },
       1024: {
@@ -44,7 +49,7 @@ export default defineComponent({
       },
       1440: {
         itemsToShow: 6,
-        snapAlign: 'start'
+        snapAlign: 'center'
       }
     })
 
