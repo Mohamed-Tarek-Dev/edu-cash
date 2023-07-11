@@ -66,6 +66,10 @@ export default defineComponent({
     onMounted(() => {
       const carouselViewport = document.querySelector('.carousel__viewport')
       carouselViewport.style.overflow = 'unset'
+      if (window.innerWidth <= 768) {
+        carouselViewport.style.position = 'relative'
+        carouselViewport.style.zIndex = '2'
+      }
     })
 
     function getImageUrl(name) {

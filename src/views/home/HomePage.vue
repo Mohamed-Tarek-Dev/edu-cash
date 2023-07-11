@@ -12,11 +12,7 @@
           </h1>
         </div>
         <div class="phones my-10 px-2 lg:my-32 md:my-10 sm:my-10">
-          <img
-            src="../../assets/images/header/phones.png"
-            class="w-11/12 mx-auto sm:w-full"
-            alt="Phones"
-          />
+          <img src="../../assets/images/header/phones.png" class="w-11/12 mx-auto sm:w-full" alt="Phones" />
         </div>
       </div>
     </div>
