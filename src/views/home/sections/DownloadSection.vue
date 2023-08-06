@@ -20,10 +20,10 @@
           <div
             class="stores flex flex-col items-center gap-3 justify-start px-2 mb-7 lg:flex-row lg:gap-5 lg:mb-0 lg:mt-5 lg:px-0"
           >
-            <a href="#"
+            <a href="https://play.google.com/store/apps/details?id=com.alalmia.alhura.educash"
               ><img src="../../../assets/images/download/logo-appstore.svg" alt="AppStore"
             /></a>
-            <a href="#"
+            <a href="https://play.google.com/store/apps/details?id=com.alalmia.alhura.educash"
               ><img src="../../../assets/images/download/logo-playstore.svg" alt="PlayStore"
             /></a>
           </div>
